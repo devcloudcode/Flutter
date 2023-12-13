@@ -12,7 +12,7 @@ class TextStyling extends StatelessWidget {
       ),
       body: Text(
         "Text Style...",
-        style: TextStyle(color: Colors.blue.shade900, fontSize: 25),
+        style: TextStyle(color: Colors.blue.shade900, fontSize: 30),
       ),
     );
   }
