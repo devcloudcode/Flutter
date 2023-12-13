@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_course/pages/container_styling.dart';
 import 'package:flutter_course/pages/text_styling_01.dart';
 
 class HomeView extends StatelessWidget {
@@ -25,6 +26,23 @@ class HomeView extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => TextStyling(),
+                    ));
+              },
+            ),
+            SizedBox(
+              height: 3,
+            ),
+            ListTile(
+              title: Text("Container Styling"),
+              subtitle: Text("How to style Container"),
+              leading: Icon(Icons.account_box),
+              trailing: Icon(Icons.chevron_right),
+              onTap: () {
+                // debugPrint("click me");
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ContainerStyling(),
                     ));
               },
             )

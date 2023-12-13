@@ -11,8 +11,19 @@ class TextStyling extends StatelessWidget {
         elevation: 3.0,
       ),
       body: Text(
-        "Text Style...",
-        style: TextStyle(color: Colors.blue.shade900, fontSize: 30),
+        "Text Style Text Style Text Style Text Style Text Style Text Style Text Style Text Style ",
+        textAlign: TextAlign.justify,
+        maxLines: 2,
+        overflow: TextOverflow.visible,
+        style: TextStyle(
+          color: Colors.blue.shade900,
+          fontSize: 25,
+          backgroundColor: Colors.blue.shade100,
+          fontWeight: FontWeight.w700,
+          fontStyle: FontStyle.italic,
+          letterSpacing: 5,
+          wordSpacing: 5,
+        ),
       ),
     );
   }
