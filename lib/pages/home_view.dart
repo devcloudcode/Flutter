@@ -4,7 +4,10 @@ import 'package:flutter_course/pages/container_styling.dart';
 import 'package:flutter_course/pages/flex_view.dart';
 import 'package:flutter_course/pages/row_view.dart';
 import 'package:flutter_course/pages/stack_view.dart';
+import 'package:flutter_course/pages/text_field_styling.dart';
+import 'package:flutter_course/pages/text_field_view.dart';
 import 'package:flutter_course/pages/text_styling_01.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -19,6 +22,52 @@ class HomeView extends StatelessWidget {
       body: SafeArea(
         child: ListView(
           children: [
+            ListTile(
+              title: const Text("TextField Styling..."),
+              subtitle: const Text("How to style text-Field"),
+              leading: const Icon(Icons.style),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () {
+                // debugPrint("click me");
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => TextFieldStyle(),
+                    ));
+              },
+            ),
+            ListTile(
+              title: const Text("FormBuilder - TextField"),
+              subtitle: const Text("How to manage text-Field"),
+              leading: const Icon(Icons.text_format),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () {
+                // debugPrint("click me");
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => TextFieldView(),
+                    ));
+              },
+            ),
+            ListTile(
+              title: const Text("Toast Package"),
+              subtitle: const Text("Toast Testing..."),
+              leading: const Icon(Icons.notifications),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () async {
+                await Fluttertoast.showToast(
+                  msg: 'this is testing short toast',
+                  toastLength: Toast.LENGTH_LONG,
+                  gravity: ToastGravity.CENTER,
+                  timeInSecForIosWeb: 1,
+                  backgroundColor: Colors.red[100],
+                  textColor: Colors.pink,
+                  fontSize: 16.0,
+                );
+              },
+            ),
+            const Divider(),
             ListTile(
               title: const Text("Text Styling"),
               subtitle: const Text("How to style text"),
