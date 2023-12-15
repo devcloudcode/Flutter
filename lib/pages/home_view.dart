@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_course/pages/columns_view.dart';
 import 'package:flutter_course/pages/container_styling.dart';
 import 'package:flutter_course/pages/flex_view.dart';
+import 'package:flutter_course/pages/form_validator_view.dart';
 import 'package:flutter_course/pages/row_view.dart';
 import 'package:flutter_course/pages/stack_view.dart';
 import 'package:flutter_course/pages/text_field_styling.dart';
@@ -22,6 +23,20 @@ class HomeView extends StatelessWidget {
       body: SafeArea(
         child: ListView(
           children: [
+            ListTile(
+              title: const Text("FormValidator"),
+              subtitle: const Text("How to validate Form data..."),
+              leading: const Icon(Icons.check_circle),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () {
+                // debugPrint("click me");
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => FormValidatorView(),
+                    ));
+              },
+            ),
             ListTile(
               title: const Text("TextField Styling..."),
               subtitle: const Text("How to style text-Field"),
