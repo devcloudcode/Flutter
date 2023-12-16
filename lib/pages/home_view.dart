@@ -5,6 +5,8 @@ import 'package:flutter_course/pages/flex_view.dart';
 import 'package:flutter_course/pages/form_validator_view.dart';
 import 'package:flutter_course/pages/row_view.dart';
 import 'package:flutter_course/pages/stack_view.dart';
+import 'package:flutter_course/pages/stateful_widget_calc.dart';
+import 'package:flutter_course/pages/stateful_widget_intro.dart';
 import 'package:flutter_course/pages/text_field_styling.dart';
 import 'package:flutter_course/pages/text_field_view.dart';
 import 'package:flutter_course/pages/text_styling_01.dart';
@@ -23,6 +25,34 @@ class HomeView extends StatelessWidget {
       body: SafeArea(
         child: ListView(
           children: [
+            ListTile(
+              title: const Text("Calculetor"),
+              subtitle: const Text("How to do dynamic Calculetor..."),
+              leading: const Icon(Icons.calculate_outlined),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () {
+                // debugPrint("click me");
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => StatefulWidgetCalculetor(),
+                    ));
+              },
+            ),
+            ListTile(
+              title: const Text("Stateful Widgets Introduction"),
+              subtitle: const Text("How to do dynamic screen..."),
+              leading: const Icon(Icons.refresh),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () {
+                // debugPrint("click me");
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => StatefulWidgetIntroView(),
+                    ));
+              },
+            ),
             ListTile(
               title: const Text("FormValidator"),
               subtitle: const Text("How to validate Form data..."),

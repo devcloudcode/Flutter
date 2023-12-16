@@ -29,6 +29,7 @@ class _FormValidatorViewState extends State<FormValidatorView> {
                   if (value!.isEmpty) {
                     return 'Please enter username';
                   }
+                  return null;
                 },
               ),
               TextFormField(
@@ -38,6 +39,7 @@ class _FormValidatorViewState extends State<FormValidatorView> {
                   if (value!.isEmpty) {
                     return 'Please enter email';
                   }
+                  return null;
                 },
               ),
               TextFormField(
@@ -47,6 +49,7 @@ class _FormValidatorViewState extends State<FormValidatorView> {
                   if (value!.isEmpty) {
                     return 'Please enter passowrd';
                   }
+                  return null;
                 },
               ),
               TextFormField(
@@ -56,6 +59,7 @@ class _FormValidatorViewState extends State<FormValidatorView> {
                   if (value!.isEmpty) {
                     return 'Please enter phone';
                   }
+                  return null;
                 },
               ),
               const SizedBox(
