@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_course/pages/columns_view.dart';
+import 'package:flutter_course/pages/complex_dynamic_list.dart';
+
 import 'package:flutter_course/pages/container_styling.dart';
+
 import 'package:flutter_course/pages/flex_view.dart';
 import 'package:flutter_course/pages/form_validator_view.dart';
 import 'package:flutter_course/pages/row_view.dart';
+import 'package:flutter_course/pages/simple_dynamic_list_view.dart';
 import 'package:flutter_course/pages/stack_view.dart';
 import 'package:flutter_course/pages/stateful_widget_calc.dart';
 import 'package:flutter_course/pages/stateful_widget_intro.dart';
@@ -25,6 +29,34 @@ class HomeView extends StatelessWidget {
       body: SafeArea(
         child: ListView(
           children: [
+            ListTile(
+              title: const Text("complex dynamic List"),
+              subtitle: const Text("Dynamic lists using model and widget..."),
+              leading: const Icon(Icons.list_alt),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () {
+                // debugPrint("click me");
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ComplexDynamicList(),
+                    ));
+              },
+            ),
+            ListTile(
+              title: const Text("Simple dynamic List"),
+              subtitle: const Text("How to make Simple dynamic List..."),
+              leading: const Icon(Icons.list),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () {
+                // debugPrint("click me");
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SimpleListView(),
+                    ));
+              },
+            ),
             ListTile(
               title: const Text("Calculetor"),
               subtitle: const Text("How to do dynamic Calculetor..."),
